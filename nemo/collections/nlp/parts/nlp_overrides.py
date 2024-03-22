@@ -1164,7 +1164,7 @@ class PipelineMixedPrecisionPlugin(MixedPrecisionPlugin, FSDPPrecision):
             raise RuntimeError(
                 "precision expected to be one of: "
                 "['16-mixed', '16', 16, 'bf16-mixed', 'bf16']"
-                f" but {plugin_precision} found"
+                f" but {precision} found"
             )
         super().__init__(plugin_precision, device, scaler=scaler)
         dtype = None
