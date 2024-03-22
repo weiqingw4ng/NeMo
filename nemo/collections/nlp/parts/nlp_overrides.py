@@ -1158,7 +1158,7 @@ class PipelineMixedPrecisionPlugin(MixedPrecisionPlugin, FSDPPrecision):
         # MixedPrecisionPlugin class in PTL >= 2.0 takes only "16-mixed" or "bf16-mixed" for precision arg
         if precision in ['16-mixed', '16', 16]:
             plugin_precision = '16-mixed'
-        elif plugin_precision in ['bf16-mixed', 'bf16']:
+        elif precision in ['bf16-mixed', 'bf16']:
             plugin_precision = 'bf16-mixed'
         else:
             raise RuntimeError(
